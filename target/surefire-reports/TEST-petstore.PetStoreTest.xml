@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="petstore.PetStoreTest" time="3.402" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="petstore.PetStoreTest" time="3.767" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ES"/>
     <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/jeanvillacis/Documents/RETOS QA/KARATE/karate-poc/target/surefire/surefirebooter-20260330105527290_3.jar /Users/jeanvillacis/Documents/RETOS QA/KARATE/karate-poc/target/surefire 2026-03-30T10-55-27_261-jvmRun1 surefire-20260330105527290_1tmp surefire_0-20260330105527290_2tmp"/>
+    <property name="sun.java.command" value="/Users/jeanvillacis/Documents/RETOS QA/KARATE/karate-poc/target/surefire/surefirebooter-20260330110059296_3.jar /Users/jeanvillacis/Documents/RETOS QA/KARATE/karate-poc/target/surefire 2026-03-30T11-00-59_259-jvmRun1 surefire-20260330110059296_1tmp surefire_0-20260330110059296_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="petstore.PetStoreTest"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/jeanvillacis/Documents/RETOS QA/KARATE/karate-poc/target/surefire/surefirebooter-20260330105527290_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/jeanvillacis/Documents/RETOS QA/KARATE/karate-poc/target/surefire/surefirebooter-20260330110059296_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="25.0.2"/>
@@ -61,9 +61,9 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="testParallel" classname="petstore.PetStoreTest" time="3.395">
-    <system-out><![CDATA[10:55:27.825 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
-10:55:28.318 [main] DEBUG com.intuit.karate - request:
+  <testcase name="testParallel" classname="petstore.PetStoreTest" time="3.759">
+    <system-out><![CDATA[11:00:59.889 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+11:01:00.616 [main] DEBUG com.intuit.karate - request:
 1 > POST https://petstore.swagger.io/v2/user
 1 > Content-Type: application/json; charset=UTF-8
 1 > Accept: application/json
@@ -74,9 +74,9 @@
 1 > Accept-Encoding: gzip,deflate
 {"id":98765,"username":"jvillacis_qa","firstName":"Jean","lastName":"Villacis","email":"jean.villacis@testqa.com","password":"SecurePass2024!","phone":"+593987654321","userStatus":1}
 
-10:55:28.727 [main] DEBUG com.intuit.karate - response time in milliseconds: 406
+11:01:01.372 [main] DEBUG com.intuit.karate - response time in milliseconds: 753
 1 < 200
-1 < Date: Mon, 30 Mar 2026 15:55:28 GMT
+1 < Date: Mon, 30 Mar 2026 16:01:01 GMT
 1 < Content-Type: application/json
 1 < Transfer-Encoding: chunked
 1 < Connection: keep-alive
@@ -86,7 +86,7 @@
 1 < Server: Jetty(9.2.9.v20150224)
 {"code":200,"type":"unknown","message":"98765"}
 
-10:55:28.743 [main] DEBUG com.intuit.karate - request:
+11:01:01.397 [main] DEBUG com.intuit.karate - request:
 1 > GET https://petstore.swagger.io/v2/user/jvillacis_qa
 1 > Content-Type: application/json
 1 > Accept: application/json
@@ -96,9 +96,9 @@
 1 > Accept-Encoding: gzip,deflate
 
 
-10:55:29.093 [main] DEBUG com.intuit.karate - response time in milliseconds: 349
+11:01:01.694 [main] DEBUG com.intuit.karate - response time in milliseconds: 297
 1 < 200
-1 < Date: Mon, 30 Mar 2026 15:55:29 GMT
+1 < Date: Mon, 30 Mar 2026 16:01:01 GMT
 1 < Content-Type: application/json
 1 < Transfer-Encoding: chunked
 1 < Connection: keep-alive
@@ -108,7 +108,7 @@
 1 < Server: Jetty(9.2.9.v20150224)
 {"id":98765,"username":"jvillacis_qa","firstName":"Jean","lastName":"Villacis","email":"jean.villacis@testqa.com","password":"SecurePass2024!","phone":"+593987654321","userStatus":1}
 
-10:55:29.114 [main] DEBUG com.intuit.karate - request:
+11:01:01.711 [main] DEBUG com.intuit.karate - request:
 1 > PUT https://petstore.swagger.io/v2/user/jvillacis_qa
 1 > Content-Type: application/json; charset=UTF-8
 1 > Accept: application/json
@@ -119,9 +119,9 @@
 1 > Accept-Encoding: gzip,deflate
 {"id":98765,"username":"jvillacis_qa","firstName":"Jean Carlos","lastName":"Villacis","email":"jean.carlos.villacis@testqa.com","password":"SecurePass2024!","phone":"+593987654321","userStatus":1}
 
-10:55:29.468 [main] DEBUG com.intuit.karate - response time in milliseconds: 352
+11:01:02.010 [main] DEBUG com.intuit.karate - response time in milliseconds: 298
 1 < 200
-1 < Date: Mon, 30 Mar 2026 15:55:29 GMT
+1 < Date: Mon, 30 Mar 2026 16:01:02 GMT
 1 < Content-Type: application/json
 1 < Transfer-Encoding: chunked
 1 < Connection: keep-alive
@@ -131,7 +131,7 @@
 1 < Server: Jetty(9.2.9.v20150224)
 {"code":200,"type":"unknown","message":"98765"}
 
-10:55:29.485 [main] DEBUG com.intuit.karate - request:
+11:01:02.029 [main] DEBUG com.intuit.karate - request:
 1 > GET https://petstore.swagger.io/v2/user/jvillacis_qa
 1 > Content-Type: application/json
 1 > Accept: application/json
@@ -141,9 +141,9 @@
 1 > Accept-Encoding: gzip,deflate
 
 
-10:55:29.833 [main] DEBUG com.intuit.karate - response time in milliseconds: 348
+11:01:02.326 [main] DEBUG com.intuit.karate - response time in milliseconds: 295
 1 < 200
-1 < Date: Mon, 30 Mar 2026 15:55:29 GMT
+1 < Date: Mon, 30 Mar 2026 16:01:02 GMT
 1 < Content-Type: application/json
 1 < Transfer-Encoding: chunked
 1 < Connection: keep-alive
@@ -153,7 +153,7 @@
 1 < Server: Jetty(9.2.9.v20150224)
 {"id":98765,"username":"jvillacis_qa","firstName":"Jean Carlos","lastName":"Villacis","email":"jean.carlos.villacis@testqa.com","password":"SecurePass2024!","phone":"+593987654321","userStatus":1}
 
-10:55:29.841 [main] DEBUG com.intuit.karate - request:
+11:01:02.340 [main] DEBUG com.intuit.karate - request:
 1 > DELETE https://petstore.swagger.io/v2/user/jvillacis_qa
 1 > Content-Type: application/json
 1 > Accept: application/json
@@ -163,9 +163,9 @@
 1 > Accept-Encoding: gzip,deflate
 
 
-10:55:30.189 [main] DEBUG com.intuit.karate - response time in milliseconds: 346
+11:01:02.643 [main] DEBUG com.intuit.karate - response time in milliseconds: 303
 1 < 200
-1 < Date: Mon, 30 Mar 2026 15:55:30 GMT
+1 < Date: Mon, 30 Mar 2026 16:01:02 GMT
 1 < Content-Type: application/json
 1 < Transfer-Encoding: chunked
 1 < Connection: keep-alive
@@ -175,7 +175,7 @@
 1 < Server: Jetty(9.2.9.v20150224)
 {"code":200,"type":"unknown","message":"jvillacis_qa"}
 
-10:55:30.206 [main] DEBUG com.intuit.karate - request:
+11:01:02.655 [main] DEBUG com.intuit.karate - request:
 1 > GET https://petstore.swagger.io/v2/user/jvillacis_qa
 1 > Content-Type: application/json
 1 > Accept: application/json
@@ -185,9 +185,9 @@
 1 > Accept-Encoding: gzip,deflate
 
 
-10:55:30.554 [main] DEBUG com.intuit.karate - response time in milliseconds: 347
+11:01:02.954 [main] DEBUG com.intuit.karate - response time in milliseconds: 298
 1 < 404
-1 < Date: Mon, 30 Mar 2026 15:55:30 GMT
+1 < Date: Mon, 30 Mar 2026 16:01:03 GMT
 1 < Content-Type: application/json
 1 < Transfer-Encoding: chunked
 1 < Connection: keep-alive
@@ -199,14 +199,14 @@
 
 ---------------------------------------------------------
 feature: classpath:petstore/user/user-crud.feature
-scenarios:  6 | passed:  6 | failed:  0 | time: 2,2558
+scenarios:  6 | passed:  6 | failed:  0 | time: 2,3741
 ---------------------------------------------------------
 
-10:55:30.815 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) classpath:petstore/user/user-crud.feature
+11:01:03.203 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) classpath:petstore/user/user-crud.feature
 Karate version: 1.5.0
 ======================================================
-elapsed:   3,23 | threads:    1 | thread time: 2,26 
-features:     1 | skipped:    0 | efficiency: 0,70
+elapsed:   3,59 | threads:    1 | thread time: 2,37 
+features:     1 | skipped:    0 | efficiency: 0,66
 scenarios:    6 | passed:     6 | failed: 0
 ======================================================
 

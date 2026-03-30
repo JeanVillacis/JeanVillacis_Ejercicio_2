@@ -1,0 +1,17 @@
+{
+  "userResponse": {
+    "id": "#number",
+    "username": "#string",
+    "firstName": "#string",
+    "lastName": "#string",
+    "email": "#string",
+    "password": "#string",
+    "phone": "#string",
+    "userStatus": "#number"
+  },
+  "apiResponse": {
+    "code": "#number",
+    "type": "#string",
+    "message": "#string"
+  }
+}

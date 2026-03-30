@@ -8,6 +8,7 @@ Feature: PetStore API - User CRUD Operations
   Background:
     * url baseUrl
     * def testData = read('classpath:petstore/user/data/user-data.json')
+    * def schemas = read('classpath:petstore/user/schema/user-schema.json')
 
   @create
   Scenario: Crear un usuario mediante POST /user
@@ -17,7 +18,7 @@ Feature: PetStore API - User CRUD Operations
     And request newUser
     When method post
     Then status 200
-    And match response == { code: 200, type: 'unknown', message: '#string' }
+    And match response == schemas.apiResponse
 
   @get
   Scenario: Buscar el usuario creado mediante GET /user/{username}
@@ -26,6 +27,7 @@ Feature: PetStore API - User CRUD Operations
     Given path 'user', expected.username
     When method get
     Then status 200
+    And match response == schemas.userResponse
     And match response contains
       """
       {
@@ -48,7 +50,7 @@ Feature: PetStore API - User CRUD Operations
     And request updated
     When method put
     Then status 200
-    And match response == { code: 200, type: 'unknown', message: '#string' }
+    And match response == schemas.apiResponse
 
   @get @verify-update
   Scenario: Verificar que los datos del usuario fueron actualizados mediante GET /user/{username}
@@ -57,9 +59,9 @@ Feature: PetStore API - User CRUD Operations
     Given path 'user', expected.username
     When method get
     Then status 200
+    And match response == schemas.userResponse
     And match response.firstName == expected.firstName
     And match response.email == expected.email
-    And match response.username == expected.username
 
   @delete
   Scenario: Eliminar el usuario mediante DELETE /user/{username}
@@ -68,7 +70,8 @@ Feature: PetStore API - User CRUD Operations
     Given path 'user', target.username
     When method delete
     Then status 200
-    And match response == { code: 200, type: 'unknown', message: '#(target.username)' }
+    And match response == schemas.apiResponse
+    And match response.message == target.username
 
   @delete @verify-delete
   Scenario: Verificar que el usuario eliminado ya no existe mediante GET /user/{username}
