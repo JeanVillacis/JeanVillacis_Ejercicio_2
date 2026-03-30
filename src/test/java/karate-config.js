@@ -1,14 +1,25 @@
 function fn() {
-  var env = karate.env; // Aquí puedes capturar el entorno (ej. dev, qa, prod)
-  karate.log('El entorno de ejecución es:', env);
+  var env = karate.env;
+  if (!env) {
+    env = 'qa';
+  }
 
   var config = {
-    baseUrl: 'https://reqres.in/api'
+    baseUrl: 'https://petstore.swagger.io/v2'
   };
 
-  // Puedes configurar timeouts si la API del reto es lenta
-  karate.configure('connectTimeout', 5000);
-  karate.configure('readTimeout', 5000);
+  if (env === 'dev') {
+    config.baseUrl = 'http://localhost:8080/v2';
+  }
+
+  karate.configure('headers', {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json'
+  });
+
+  karate.configure('connectTimeout', 10000);
+  karate.configure('readTimeout', 10000);
+  karate.configure('ssl', true);
 
   return config;
 }
