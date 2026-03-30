@@ -1,0 +1,22 @@
+{
+  "createUser": {
+    "id": 98765,
+    "username": "jvillacis_qa",
+    "firstName": "Jean",
+    "lastName": "Villacis",
+    "email": "jean.villacis@testqa.com",
+    "password": "SecurePass2024!",
+    "phone": "+593987654321",
+    "userStatus": 1
+  },
+  "updateUser": {
+    "id": 98765,
+    "username": "jvillacis_qa",
+    "firstName": "Jean Carlos",
+    "lastName": "Villacis",
+    "email": "jean.carlos.villacis@testqa.com",
+    "password": "SecurePass2024!",
+    "phone": "+593987654321",
+    "userStatus": 1
+  }
+}
